@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
+    NEXTAUTH_URL: 'https://nextauth-mh77.vercel.app',
     EMAIL_SERVER_HOST: '',
     EMAIL_SERVER_PORT: '',
     EMAIL_SERVER_USER: '',
