@@ -26,7 +26,11 @@ const nextConfig = {
     FACEBOOK_CLIENT_SECRET: '',
   },
   images: {
-    domains: ['i.stack.imgur.com', 'avatars.githubusercontent.com'],
+    domains: [
+      'i.stack.imgur.com',
+      'avatars.githubusercontent.com',
+      'lh3.googleusercontent.com',
+    ],
   },
 }
 

@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import Router from 'next/router'
+import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 import { getCsrfToken, getProviders, getSession, signIn } from 'next-auth/react'
 
 export default function SignIn({ csrfToken, providers }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState(null)
+
+  const router = useRouter()
 
   const signInUser = async (e) => {
     e.preventDefault()
@@ -19,7 +21,7 @@ export default function SignIn({ csrfToken, providers }) {
       setMessage(res.error)
     }
 
-    return Router.push('/')
+    return router.push('/')
   }
 
   const signUpUser = async (e) => {
@@ -43,7 +45,7 @@ export default function SignIn({ csrfToken, providers }) {
     if (data.message === 'Registered successfully') {
       let options = { redirect: false, email, password }
       const res = await signIn('credentials', options)
-      return Router.push('/')
+      return router.push('/')
     }
   }
 

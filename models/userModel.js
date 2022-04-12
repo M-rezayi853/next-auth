@@ -20,5 +20,4 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-let Dataset = mongoose.models.users || mongoose.model('users', userSchema)
-export default Dataset
+module.exports = mongoose.models.User || mongoose.model('User', userSchema)
