@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     NEXTAUTH_URL: 'https://nextauth-mh77.vercel.app',
+    NEXTAUTH_URL2: 'http://localhost:3000',
     EMAIL_SERVER_HOST: '',
     EMAIL_SERVER_PORT: '',
     EMAIL_SERVER_USER: '',
@@ -21,6 +22,11 @@ const nextConfig = {
     AUTH0_CLIENT_SECRET:
       'nJQogBBlTuykKB3Ju3TsvJWi7FbMVRJ1GR43kTcyO4K42hmL9Pq0LbwNoVwy3v0V',
     AUTH0_ISSUER: 'https://dev-x9z4zybt.us.auth0.com',
+    FACEBOOK_CLIENT_ID: '',
+    FACEBOOK_CLIENT_SECRET: '',
+  },
+  images: {
+    domains: ['i.stack.imgur.com', 'avatars.githubusercontent.com'],
   },
 }
 
